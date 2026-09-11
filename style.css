@@ -1,0 +1,334 @@
+/* Reset & Pengaturan Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Kunci utama agar footer selalu menempel di bawah layar */
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f0fdf4; /* Hijau sangat lembut khas rumah sakit */
+    color: #334155;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header (Selalu di Atas) */
+header {
+    background: linear-gradient(135deg, #059669, #10b981); /* Hijau medis modern */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 5px;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Main Container (Mendorong footer agar selalu di bawah) */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(5, 150, 105, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    border-top: 4px solid #059669;
+}
+
+.form-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #047857;
+    text-align: center;
+    font-size: 22px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #1e293b;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #059669;
+    box-shadow: 0 0 5px rgba(5, 150, 105, 0.2);
+    outline: none;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    flex: 1;
+    padding: 10px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-submit {
+    background-color: #059669;
+    color: #fff;
+}
+
+.btn-submit:hover {
+    background-color: #047857;
+}
+
+.btn-reset {
+    background-color: #e2e8f0;
+    color: #475569;
+}
+
+.btn-reset:hover {
+    background-color: #cbd5e1;
+}
+
+/* Section, Article, Aside */
+section {
+    padding: 10px 0;
+}
+
+article {
+    border: 1px solid #a7f3d0;
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+aside {
+    background: #ffffff;
+    border-left: 4px solid #059669;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+aside:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.15);
+}
+
+aside h2, aside h3 {
+    color: #047857;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #ecfdf5;
+    padding-bottom: 8px;
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside ul li a {
+    color: #475569;
+    text-decoration: none;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+    display: block;
+    padding: 5px 0;
+}
+
+aside ul li a:hover {
+    color: #059669;
+    padding-left: 5px;
+}
+
+/* Figure & Gambar */
+figure {
+    margin: 0 0 20px 0;
+    padding: 12px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+figure:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(5, 150, 105, 0.1);
+    border-color: #059669;
+}
+
+figure img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.5s ease;
+}
+
+figure:hover img {
+    transform: scale(1.03);
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #047857;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+/* Profil Card */
+.profile-card {
+    background: #ffffff;
+    border: 2px solid #059669;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 450px;
+    margin: 20px auto;
+    box-shadow: 0 10px 25px rgba(5, 150, 105, 0.08);
+}
+
+.profile-card:hover {
+    transform: scale(1.01);
+}
+
+.profile-header h2 {
+    text-align: center;
+    color: #047857;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.avatar-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ecfdf5;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.08);
+}
+
+.profile-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-list li {
+    background: #f8fafc;
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: #334155;
+    font-size: 0.95rem;
+    border-left: 4px solid #059669;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-list li strong {
+    color: #047857;
+}
+
+/* Footer (Selalu di Bawah & Warna Hijau Gelap Profesional) */
+footer {
+    background-color: #064e3b;
+    color: #ecfdf5;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    width: 100%;
+}

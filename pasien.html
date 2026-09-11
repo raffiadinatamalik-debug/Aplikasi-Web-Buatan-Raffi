@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pasien - Rumah Sakit Dr Samsudin</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigasi -->
+    <header>
+        <div class="header-container">
+            <h1>Sistem Data Pasien</h1>
+            <nav>
+                <a href="home.html">Beranda</a>
+                <a href="profil.html">Profil</a>
+                <a href="pasien.html" class="active">Data Pasien</a>
+                <a href="informasi.html">Informasi</a>
+                <a href="data.html">Jadwal Dokter</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Konten Utama -->
+    <main class="container">
+        
+        <!-- Bagian Form Input Pasien -->
+        <section class="patient-section">
+            <div class="form-card">
+                <h2>📋 Form Pendaftaran Pasien Baru</h2>
+                <form action="proses.php" method="POST" class="patient-form">
+                    
+                    <div class="form-group">
+                        <label for="nps">Nama Pasien</label>
+                        <input type="text" id="nps" name="nps" placeholder="Masukkan nama lengkap" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="umur">Umur</label>
+                            <input type="number" id="umur" name="umur" placeholder="Masukkan umur" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="jk">Jenis Kelamin</label>
+                            <select id="jk" name="jk" required>
+                                <option value="" disabled selected>Pilih jenis kelamin</option>
+                                <option value="L">Laki-laki</option>
+                                <option value="P">Perempuan</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="keluhan">Keluhan Penyakit</label>
+                        <textarea id="keluhan" name="Keluhan" rows="4" placeholder="Tuliskan keluhan atau gejala yang dialami..." required></textarea>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit" class="btn-submit">Simpan Data</button>
+                        <button type="reset" class="btn-reset">Reset</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- Bagian Tabel Data Pasien (Opsional agar makin menarik) -->
+        <section class="patient-table-section">
+            <div class="table-card">
+                <h2>🏥 Daftar Pasien Terdaftar Hari Ini</h2>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama Pasien</th>
+                                <th>Umur</th>
+                                <th>L/P</th>
+                                <th>Keluhan</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Budi Santoso</td>
+                                <td>34</td>
+                                <td>L</td>
+                                <td>Demam dan Sakit Kepala</td>
+                                <td><span class="badge active-badge">Proses</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Siti Aminah</td>
+                                <td>28</td>
+                                <td>P</td>
+                                <td>Batuk dan Pilek Berkelanjutan</td>
+                                <td><span class="badge success-badge">Selesai</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Rumah Sakit Dr Samsudin. Hak Cipta Dilindungi.</p>
+            <p class="footer-marquee"><em>Sistem pencatatan data pasien cepat, akurat, dan terpadu.</em></p>
+            <p class="footer-date">Terakhir diperbarui: <time datetime="2026-09-11">11 September 2026</time></p>
+        </div>
+    </footer>
+
+</body>
+</html>
